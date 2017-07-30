@@ -1,5 +1,13 @@
-#过滤根目录下的文件
-/doc
+﻿#过滤根目录下的文件
+/node_modules
+
+#过滤所有doc下的文件
+doc/
+
+#过滤根某个具体文件
+/doc/xrtShu-xrtGIT.txt
 
 #过滤文件
 *.zip
+
+#为注释
