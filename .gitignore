@@ -1,5 +1,0 @@
-﻿#过滤根目录下的文件
-/xrtShu-xrtGIT.txt
-
-#过滤文件
-*.zip
