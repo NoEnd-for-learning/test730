@@ -1,7 +1,6 @@
-### 学习 mocha nyc travis-ci
+### 学习 mocha nyc [Travis CI](https://www.travis-ci.com/)
 
-
-run by node >= 12.22.0
+Run by Node: 12.22.0
 
 #### 测试覆盖率
 ```text

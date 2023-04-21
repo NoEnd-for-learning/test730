@@ -1,7 +1,7 @@
 {
   "name": "mocha_nyc_travis",
   "version": "1.0.0",
-  "description": "学习 mocha, nyc, travis ci",
+  "description": "学习 mocha, nyc, Travis CI",
   "main": "src/math.js",
   "scripts": {
     "test": "mocha 'test/**/*.test.js' --exit",
@@ -10,7 +10,7 @@
   "keywords": [
     "mocha",
     "nyc",
-    "travis-ci"
+    "Travis CI"
   ],
   "author": "annie_tim",
   "license": "ISC",
