@@ -1,20 +1,23 @@
 {
-  "name": "mocha_nyc_travis",
+  "name": "test730",
   "version": "1.0.0",
-  "description": "学习 mocha, nyc, Travis CI",
+  "description": "学习 mocha, nyc, Travis CI, benchmark",
   "main": "src/math.js",
   "scripts": {
     "test": "mocha 'test/**/*.test.js' --exit",
-    "coverage": "nyc --reporter=lcov --reporter=text mocha"
+    "coverage": "nyc --reporter=lcov --reporter=text mocha",
+    "benchmark": "node test/benchmark.js"
   },
   "keywords": [
     "mocha",
     "nyc",
-    "Travis CI"
+    "Travis CI",
+    "benchmark"
   ],
   "author": "annie_tim",
   "license": "ISC",
   "devDependencies": {
+    "benchmark": "^2.1.4",
     "chai": "^4.3.7",
     "mocha": "^9.2.2",
     "nyc": "^15.1.0"
