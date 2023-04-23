@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
+import sinon from 'sinon';
 import { Demo } from '../src/demo';
 
 describe("UI test #demo", () => {
@@ -39,5 +40,19 @@ describe("UI test #demo", () => {
     const counterNodes = container.querySelectorAll('.counter');
     const counter = counterNodes[0];
     expect(counter.textContent).toBe('999999');
+  });
+
+  // 统计钩子函数的执行次数
+  it('should calls componentDidMount & componentDidUpdate', function () {
+    const onMountSpy = sinon.spy();
+    const onUpdateSpy = sinon.spy();
+
+    const { rerender } = render(<Demo onMount={onMountSpy} onUpdate={onUpdateSpy} />);
+    expect(onMountSpy.callCount).toBe(1);
+    expect(onUpdateSpy.callCount).toBe(0);
+
+    rerender(<Demo onMount={onMountSpy} onUpdate={onUpdateSpy} title={'componentDidUpdate'} />);
+    expect(onMountSpy.callCount).toBe(1);
+    expect(onUpdateSpy.callCount).toBe(2);
   });
 });

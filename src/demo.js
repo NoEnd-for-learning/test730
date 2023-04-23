@@ -29,7 +29,16 @@ export class Demo extends React.PureComponent {
     });
   };
 
+  componentDidMount() {
+    if (typeof this.props.onMount === 'function') {
+      this.props.onMount();
+    }
+  }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
+    if (typeof this.props.onUpdate === 'function') {
+      this.props.onUpdate();
+    }
     this.setState({
       title: this.props.title,
     }, () => {
