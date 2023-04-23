@@ -4,10 +4,10 @@
   "description": "学习 mocha, nyc, Travis CI, benchmark, jest",
   "main": "src/math.js",
   "scripts": {
-    "test": "mocha 'test/**/*.test.js' --exit",
+    "mocha": "mocha",
     "coverage": "nyc --reporter=lcov --reporter=text mocha",
-    "benchmark": "node test/benchmark.js",
-    "jest": "jest test/__tests__/demo.js"
+    "benchmark": "node test/fn.benchmark.js",
+    "jest": "jest"
   },
   "keywords": [
     "mocha",
@@ -34,6 +34,7 @@
     "react-test-renderer": "^18.2.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -1,8 +1,8 @@
 // 基准测试
 const { num1, num2 } = require('../src/fn');
 
-const Benchmark = require('benchmark');
-const suite = new Benchmark.Suite;
+const FnBenchmark = require('benchmark');
+const suite = new FnBenchmark.Suite;
 
 suite
   .add('parsesInt', () => {

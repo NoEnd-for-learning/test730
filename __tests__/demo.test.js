@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Demo } from '../../src/demo';
+import { Demo } from '../src/demo';
 
 describe("UI test #demo", () => {
   it('should have title', function () {
