@@ -1,4 +1,9 @@
-### 学习 mocha nyc [Travis CI](https://www.travis-ci.com/)
+### Learning Test about:
+ * mocha
+ * nyc 
+ * [Travis CI](https://www.travis-ci.com/)
+ * benchmark
+ * jest
 
 Run by Node: 14.19.1
 
@@ -16,11 +21,16 @@ mocha：这是 Mocha 测试运行器的命令行接口，它会将测试文件�
 
 ```shell script
 npm run jest
-/* 对应的文件目录为：**/__tests__/**/*.test.js
+# 对应的文件目录为：**/__tests__/**/*.test.js
 ```
 
 ```shell script
-npm run test
+npm run mocha
 npm run coverage
-/* 对应的文件目录为：test/**/*.test.js
+# 对应的文件目录为：test/**/*.test.js
+```
+
+```shell script
+npm run benchmark
+# 启动benchmark
 ```

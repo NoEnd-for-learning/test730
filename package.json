@@ -1,6 +1,6 @@
 {
   "name": "test730",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "学习 mocha, nyc, Travis CI, benchmark, jest",
   "main": "src/math.js",
   "scripts": {
