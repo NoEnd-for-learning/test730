@@ -4,6 +4,7 @@
  * [Travis CI](https://www.travis-ci.com/)
  * benchmark
  * jest
+ * webdriver
 
 Run by Node: 14.19.1
 

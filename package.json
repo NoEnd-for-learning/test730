@@ -1,20 +1,22 @@
 {
   "name": "test730",
-  "version": "1.0.1",
-  "description": "学习 mocha, nyc, Travis CI, benchmark, jest",
+  "version": "1.0.2",
+  "description": "学习 mocha, nyc, Travis CI, benchmark, jest, webdriver",
   "main": "src/math.js",
   "scripts": {
     "mocha": "mocha",
     "coverage": "nyc --reporter=lcov --reporter=text mocha",
     "benchmark": "node test/fn.benchmark.js",
-    "jest": "jest --coverage"
+    "jest": "jest --coverage",
+    "webdriver": "mocha test/webdriver.js"
   },
   "keywords": [
     "mocha",
     "nyc",
     "Travis CI",
     "benchmark",
-    "jest"
+    "jest",
+    "webdriver"
   ],
   "author": "annie_tim",
   "license": "ISC",
@@ -33,6 +35,7 @@
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
     "react-test-renderer": "^18.2.0",
+    "selenium-webdriver": "^4.9.0",
     "sinon": "^15.0.4"
   },
   "dependencies": {
