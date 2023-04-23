@@ -29,9 +29,15 @@ describe("UI test #demo", () => {
     // const inputNodes = container.querySelectorAll('.my-input');
     // const input = inputNodes[0];
     const input = screen.getByLabelText('Input:');
-    fireEvent.change(input, { target: { value: '142857' } });
-
+    fireEvent.change(input, { target: { value: 142857 } });
 
     expect(counter.textContent).toBe('142857');
+  });
+
+  it('should change when props change', () => {
+    const { container } = render(<Demo value={999999} />);
+    const counterNodes = container.querySelectorAll('.counter');
+    const counter = counterNodes[0];
+    expect(counter.textContent).toBe('999999');
   });
 });
