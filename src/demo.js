@@ -18,18 +18,19 @@ export class Demo extends React.PureComponent {
 
   add = () => {
     this.setState({
-      value: this.state.value++,
+      value: this.state.value + 1,
     });
   };
 
   change = (evt) => {
+    console.log('Input value: ', evt.target.value);
     this.setState({
       value: evt.target.value,
     });
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log(this.props, 'did update');
+    console.log(this.props, 'componentDidUpdate');
     this.setState({
       title: this.props.title,
     });
@@ -45,7 +46,16 @@ export class Demo extends React.PureComponent {
         <div className="counter">
           {this.state.value}
         </div>
-        <input type="number" value={this.state.value} onChange={this.change}/>
+        <form>
+          <label htmlFor="my-input">Input:</label>
+          <input className="my-input"
+                 id="my-input"
+                 name="counter-input"
+                 type="text"
+                 value={this.state.value}
+                 onChange={this.change}
+          />
+        </form>
         <button onClick={this.add}>value++</button>
       </div>
     );
